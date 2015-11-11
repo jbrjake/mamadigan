@@ -11,7 +11,7 @@
  	}
 
  	#themiddle{
-	 	width:600px;
+	 	width:800px;
 	 	position:relative;
 	 	float:left;
  	}
@@ -22,19 +22,19 @@
 		 text-align:center;
 	 }
 	 #girlleft{
-		 width: 200px;
+		 width: 100px;
 		 height:400px;
 		 position:relative;
 	 	 float:left;
 	 }
 	 #girlright{
-		 width: 200px;
+		 width: 100px;
 		 height:400px;
 		 position:relative;
 	 	 float:right;
 	 }
      #clock{
-         left:66px;
+         left:90px;
      }
  </style>
  <link rel="stylesheet" href="flipclock.css">
@@ -60,10 +60,10 @@
     var today = new Date();
     var dif = date.getTime() - today.getTime();
     var timeLeft = Math.abs(dif/1000);
-    var clock = $('.your-clock').FlipClock({
+    var clock = $('.your-clock').FlipClock(3600 * 24 * 3, {
         autoStart: false,
-        countdown: true
-        
+        countdown: true,
+        clockFace: 'DailyCounter'
     });
     clock.setTime(timeLeft)
     clock.start();

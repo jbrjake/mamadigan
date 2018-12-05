@@ -44,31 +44,14 @@
 <div id="content">
  <div id="girlleft"></div>
  <div id="themiddle">
-    <div id="clock" class="your-clock"></div>
 	<div id="mom">
         <img src="slave_kat.png">
-    </div>
 	<div id="sitetitle"><img src="sitetitle.gif"></div>
  </div>
  <div id="girlright"></div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="flipclock.min.js"></script>
-<script type="text/javascript">
-    var date = new Date(2017, 11, 15, 19);
-    var today = new Date();
-    var dif = date.getTime() - today.getTime();
-    var timeLeft = Math.abs(dif/1000);
-    var clock = $('.your-clock').FlipClock({
-        autoStart: false,
-        countdown: true,
-        clockFace: 'DailyCounter'
-    });
-    clock.setTime(timeLeft)
-    clock.start();
-        
-</script>
 
 </body>
 </html>
